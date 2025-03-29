@@ -1,5 +1,7 @@
 from flask import Flask, send_from_directory
+import os
 
+# Absoluter Pfad zum Frontend-Ordner
 app = Flask(__name__, static_folder="../frontend")
 
 @app.route('/')
@@ -8,3 +10,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
